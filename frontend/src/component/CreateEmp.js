@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
+import { Link } from 'react-router-dom';
 
 export default class CreateEmp extends Component {
     constructor(props) {
@@ -47,6 +48,11 @@ export default class CreateEmp extends Component {
                 <br />
                 <div className="container">
                     <div className="row">
+                        <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                        </ul>
                         <div className="card col-md-6 offset-md-3 offset-md-3">
                            
                             <div className="card-body">

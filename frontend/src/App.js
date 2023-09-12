@@ -1,16 +1,28 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import ListOfEmployee from './component/ListOfEmployee';
 import CreateEmp from './component/CreateEmp';
-import UpdateEmployeeComponent from './component/update';
+import ViewEmployeeComponent from './component/ViewEmployeeComponent';
 
 function App() {
   return (
-    <div className="App">
-      <h1> This is the first page</h1>
-      <ListOfEmployee></ListOfEmployee>
-      <CreateEmp/>
-        <UpdateEmployeeComponent/>
+    <div>
+        <Router>
+              
+                <div className="container">
+                    <Routes> 
+                          <Route path = "/"  element = {<ListOfEmployee/>}></Route>
+                          <Route path = "/employees" element = {<ListOfEmployee/>}></Route>
+                          <Route path = "/add-employee" element = {<CreateEmp/>}></Route>
+                          <Route path = "/view-employee" element = {<ViewEmployeeComponent/>}></Route>
+                          {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
+                    </Routes>
+                </div>
+              
+        </Router>
     </div>
+    
   );
 }
 
